@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torres Programadora Web</title>
+    <link rel="stylesheet" href="../LorenaTorres1_trabajo/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../LorenaTorres1_trabajo/index.html">Inicio</a></li>
+                <li><a href="../LorenaTorres1_trabajo/productos.html">Productos</a></li>
+                <li><a href="../LorenaTorres1_trabajo/presupuesto.html" class="active">Presupuesto</a></li>
+                <li><a href="../LorenaTorres1_trabajo/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Solicite un Presupuesto</h1>
+        <form action="enviar_presupuesto.php" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="user-name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" required>
+    
+            <label for="info">Solicite más información:</label>
+            <textarea id="info" name="info" rows="4" required></textarea>
+    
+            <label>
+                <input type="checkbox" name="privacy" required> Acepto la <a href="../LorenaTorres1_trabajo/terminos privacidad.txt">Política de Privacidad</a>
+            </label>
+    
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="../LorenaTorres1_trabajo/imagenes/facebooklogo.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../LorenaTorres1_trabajo/imagenes/xlogo.png" alt="X">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../LorenaTorres1_trabajo/imagenes/instagramlogo.png" alt="Instagram">
+            </a>
+        </div>
+        <p>Calle Falsa, 123</p>
+        <p><a href="../LorenaTorres1_trabajo/terminos privacidad.txt">Aviso Legal</a></p>
+    </footer>
+</body>
+</html>

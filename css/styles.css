@@ -1,0 +1,167 @@
+/* Reset básico para eliminar márgenes y rellenos por defecto y para un manejo consistente del box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Fuente general */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad del texto */
+    color: black; /* Color de texto principal */
+    background-color: #f4f4f4; /* Color de fondo general (opcional, para mejorar la visibilidad) */
+}
+
+/* Estilo del encabezado y navegación */
+header {
+    background-color: #31a1f1; /* Color de fondo del encabezado */
+    color: white; /* Color del texto en el encabezado */
+    padding: 15px; /* Espaciado interno del encabezado */
+    display: flex; /* Utiliza Flexbox para alinear el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilo del contenedor del logotipo */
+.logo {
+    text-align: center; /* Centra el logotipo horizontalmente dentro de su contenedor */
+}
+
+/* Estilo de la imagen del logotipo */
+.logo img {
+    max-height: 200px; /* Limita la altura máxima del logotipo */
+    width: auto; /* Mantiene la proporción original de la imagen */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Estilo de la lista de navegación */
+header nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Utiliza Flexbox para alinear los elementos de la lista horizontalmente */
+    gap: 20px; /* Espacio entre los elementos de la lista */
+}
+
+/* Estilo de los elementos de la lista de navegación */
+header nav ul li {
+    margin: 0; /* Elimina el margen por defecto de los elementos de la lista */
+}
+
+/* Estilo de los enlaces activos en el menú de navegación */
+header nav ul li a.active {
+    background-color: #aeb3b8; /* Color de fondo del enlace activo */
+    color: white; /* Color del texto del enlace activo */
+    padding: 10px 20px; /* Espaciado interno del enlace activo */
+    border-radius: 5px; /* Bordes redondeados del enlace activo */
+    text-decoration: none; /* Elimina el subrayado del enlace activo */
+}
+
+/* Estilo de los enlaces en el menú de navegación al pasar el ratón por encima */
+header nav ul li a:hover {
+    background-color: aliceblue; /* Color de fondo al pasar el ratón */
+    color: #31a1f1; /* Color del texto al pasar el ratón */
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #31a1f1; /* Color de fondo del pie de página */
+    color: white; /* Color del texto en el pie de página */
+    padding: 10px; /* Espaciado interno del pie de página */
+    text-align: center; /* Centra el texto en el pie de página */
+}
+
+/* Estilo de los enlaces en el pie de página */
+footer .social a {
+    display: inline-block; /* Hace que los enlaces se comporten como bloques en línea */
+    margin: 0 10px; /* Espacio entre los iconos de redes sociales */
+}
+
+/* Estilo de las imágenes en los enlaces de redes sociales */
+footer .social a img {
+    height: 20px; /* Altura fija para los iconos de redes sociales */
+    width: auto; /* Mantiene la proporción de los iconos */
+}
+
+/* Estilo de las secciones específicas del contenido */
+main .intro,
+main .services,
+main .about-us,
+main .gallery,
+main .contact-form,
+main .contact-info {
+    padding: 40px; /* Espaciado interno para cada sección */
+    text-align: center; /* Centra el texto en cada sección */
+    margin: 0 auto; /* Centra las secciones horizontalmente */
+}
+
+/* Estilo de la galería de productos */
+.gallery {
+    display: flex; /* Utiliza Flexbox para alinear los elementos de la galería */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea */
+    justify-content: center; /* Centra los elementos de la galería horizontalmente */
+}
+
+/* Estilo de los elementos individuales en la galería */
+.gallery-item {
+    width: 200px; /* Ancho fijo para cada elemento de la galería */
+    margin: 10px; /* Espacio alrededor de cada elemento */
+    text-align: center; /* Centra el texto dentro de cada elemento de la galería */
+}
+
+/* Estilo de las imágenes dentro de los elementos de la galería */
+.gallery-item img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo del contenedor del mapa */
+.map-container {
+    width: 300px; /* Ancho fijo del contenedor del mapa */
+    max-width: 100%; /* Asegura que el contenedor no sea más ancho que su contenedor padre */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px 0; /* Espaciado interno del contenedor */
+}
+
+/* Estilo de la imagen del mapa */
+.map-container img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad a la imagen */
+}
+
+/* Estilo del formulario */
+form {
+    display: flex; /* Utiliza Flexbox para alinear los elementos del formulario */
+    flex-direction: column; /* Coloca los elementos del formulario en una columna */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+/* Estilo de las etiquetas del formulario */
+form label {
+    margin-bottom: 5px; /* Espacio debajo de las etiquetas */
+}
+
+/* Estilo de los campos de entrada y textarea del formulario */
+form input,
+form textarea {
+    padding: 8px; /* Espaciado interno de los campos de entrada y textarea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin-bottom: 10px; /* Espacio debajo de los campos de entrada y textarea */
+    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
+}
+
+/* Estilo del botón de envío del formulario */
+form button {
+    padding: 10px; /* Espaciado interno del botón */
+    background-color: #333; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilo del botón de envío al pasar el ratón por encima */
+form button:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el ratón */
+}
