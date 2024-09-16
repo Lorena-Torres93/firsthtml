@@ -61,16 +61,20 @@ header nav ul li a:hover {
     background-color: aliceblue; /* Color de fondo al pasar el ratón */
     color: #31a1f1; /* Color del texto al pasar el ratón */
 }
-
+main{
+    flex: 1;
+}
 /* Estilo del pie de página */
 footer {
     background-color: #31a1f1; /* Color de fondo del pie de página */
     color: white; /* Color del texto en el pie de página */
     padding: 10px; /* Espaciado interno del pie de página */
     text-align: center; /* Centra el texto en el pie de página */
+    margin-top: 30px; /*Espaciado superior*/
+    width: 100%;
 }
 
-/* Estilo de los enlaces en el pie de página */
+/*Estilo de los enlaces en el pie de página */
 footer .social a {
     display: inline-block; /* Hace que los enlaces se comporten como bloques en línea */
     margin: 0 10px; /* Espacio entre los iconos de redes sociales */
@@ -86,7 +90,7 @@ footer .social a img {
 main .intro,
 main .services,
 main .about-us,
-main .gallery,
+main .gallery h2,
 main .contact-form,
 main .contact-info {
     padding: 40px; /* Espaciado interno para cada sección */
@@ -96,22 +100,30 @@ main .contact-info {
 
 /* Estilo de la galería de productos */
 .gallery {
-    display: flex; /* Utiliza Flexbox para alinear los elementos de la galería */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea */
-    justify-content: center; /* Centra los elementos de la galería horizontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    grid-gap: 20px; /* Espacio entre los items */
+    margin-top: 20px; /* Espacio superior de la galería */
+    justify-items: center; /* Centrar las imágenes dentro de las columnas */
 }
 
-/* Estilo de los elementos individuales en la galería */
-.gallery-item {
-    width: 200px; /* Ancho fijo para cada elemento de la galería */
-    margin: 10px; /* Espacio alrededor de cada elemento */
-    text-align: center; /* Centra el texto dentro de cada elemento de la galería */
+.gallery h2 {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 80px; /* Separar el título de las imágenes */
+    margin-top: 0; /* Eliminar espacio adicional encima del título */
 }
 
 /* Estilo de las imágenes dentro de los elementos de la galería */
 .gallery-item img {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 250px; /* Asignar el mismo ancho a todas las imágenes */
+    height: 250px; /* Asignar la misma altura a todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Estilo de los elementos individuales en la galería */
+.gallery-item {
+    text-align: center; /* Centra el texto debajo de las imágenes */
 }
 
 /* Estilo del contenedor del mapa */
